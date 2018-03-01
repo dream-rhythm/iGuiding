@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Video Stream</title>
+</head>
+<script>
+var pngNumber=0
+var buf0 = new Image()
+buf0.src="WEB0.png"
+var buf1 = new Image()
+buf1.src="WEB1.png"
+var buf2 = new Image()
+buf2.src="WEB2.png"
+var buf3 = new Image()
+buf3.src="WEB3.png"
+var buf4 = new Image()
+buf4.src="WEB4.png"
+function run(){
+	var date=new Date()
+	pngNumber=(pngNumber+1)%5
+	if(pngNumber==0){
+		buf0.src="WEB0.png?v="+date.getTime()
+		document.getElementById('bg0').src=buf1.src
+	}
+	else if(pngNumber==1){
+		buf1.src="WEB1.png?v="+date.getTime()
+		document.getElementById('bg0').src=buf2.src
+	}
+	else if(pngNumber==2){
+		buf2.src="WEB2.png?v="+date.getTime()
+		document.getElementById('bg0').src=buf3.src
+	}
+	else if(pngNumber==3){
+		buf3.src="WEB3.png?v="+date.getTime()
+		document.getElementById('bg0').src=buf4.src
+	}
+	else if(pngNumber==4){
+		buf4.src="WEB4.png?v="+date.getTime()
+		document.getElementById('bg0').src=buf0.src
+	}
+	
+}
+function start(){
+	setInterval(run,200)
+}
+</script>
+<body onload="start()">
+	<img src="WEB0.png" id='bg0' height="100%" width="100%" style="display:block">
+</body>
+</html>

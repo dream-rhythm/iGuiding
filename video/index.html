@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>目錄</title>
+		<link rel="stylesheet" href="webix/codebase/webix.css" type="text/css" charset="utf-8">
+		<script src="webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>
+		<script src="websocket.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="webix/samples/common/treedata.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="webix/samples/common/samples.css">
+	</head>
+	<body onload="init()">
+	
+	<img src='back.ico' width='30px' height='30px'><label ><strong>返回功能選單</strong></label>
+		<div class='header_comment'>
+			檔案列表
+			<input type="button" value="重新整理" onclick="reload()">
+		</div>
+		<div class='header_comment'>
+		User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student:<br>
+			<img src='FcuPic.jpg' width='148px' height='188px'>
+			<img src='student.png' width='148px' height='188px'>
+		</div>
+		<div id="testA" style='width:300px; height:250px; float:left'></div>
+		<div id="testB" style='width:300px; height:250px; float:left'>
+			<video controls>
+				<source src="" id="videoView" type="video/mp4" />
+			</video>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+
+			tree = webix.ui({
+				container:"testA",
+				view:"tree",
+				select:true,
+				template:"{common.icon()} {common.folder()} <span>#value#</span>", 
+				data: webix.copy(smalltreedata),
+				on: {
+					onSelectChange:function () {
+						var item = tree.getSelectedId(true)
+						var text ="http://127.0.0.1/iGuiding/video/"+ item
+						var str = "<video controls><source src="+text+"  type='video/mp4' /></video>"
+						if(item!="1"&&item!="2"&&item!="3"){
+							document.getElementById('testB').innerHTML=str
+						}
+					}
+				}
+			});
+			function reload(){
+				testWebSocket(); 
+			}
+			
+		</script>
+	</body>
+</html>
