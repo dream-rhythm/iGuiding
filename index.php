@@ -7,7 +7,7 @@
 	<!--<![endif]-->
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>登入</title>
+	<title>Sign in</title>
 	<style type="text/css">
 img.wp-smiley,
 img.emoji {
@@ -38,11 +38,11 @@ img.emoji {
 	
 <form name="form" id="loginform" action="connect.php" method="post">
 	<p>
-		<label for="user_login">Username or Email<br />
+		<label for="user_login">NID<br />
 		<input type="text" name="id" id="user_login" class="input" value="" size="20" /></label>
 	</p>
 	<p>
-		<label for="user_pass">密碼<br />
+		<label for="user_pass">Password<br />
 		<input type="password" name="pw" id="user_pass" class="input" value="" size="20" /></label>
 	</p>
 	<div class="clef-login-container">
@@ -73,16 +73,16 @@ img.emoji {
     
 </div>
 
-	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> 記住我</label></p>
+	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Remember</label></p>
 	<p class="submit">
-		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="登入" />
+		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Sign in" />
 		<input type="hidden" name="redirect_to" value="http://nicky.esy.es/newbaby/wp-admin/" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
 </form>
 
 <p id="nav">
-	<a href="http://nicky.esy.es/newbaby/wp-login.php?action=lostpassword">忘了密碼？</a>
+	<!--<a href="http://nicky.esy.es/newbaby/wp-login.php?action=lostpassword">Forgot password？</a>-->
 </p>
 
 <script type="text/javascript">

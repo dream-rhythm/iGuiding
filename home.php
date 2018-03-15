@@ -60,7 +60,7 @@ while($row = mysql_fetch_array($result)){
 <!DOCTYPE html>
 <html>
 <head>
- <title>會員登入</title>
+ <title>Login</title>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -72,22 +72,22 @@ while($row = mysql_fetch_array($result)){
 <div class="container">
  <div class="row jumbotron">
  <div class="col-md-6 col-md-offset-3">
- <h2 class="text-center">會員登入</h2><br/>
+ <h2 class="text-center">Login</h2><br/>
  <form action="<?php echo htmlspecialchars($_SERVER[">" method="POST")?>
  <input class="form-control input-lg" id="pass" type="text" name="email" required="TRUE" placeholder="E-Mail"/><br/>
  <input class="form-control input-lg" id="pass" type="password" name="pass" required="TRUE" placeholder="密碼"/><br/>
- <input class="btn btn-primary btn-lg btn-block" type="submit" value="登入"/><a class="btn btn-default btn-lg btn-block" href="register.php">會員註冊</a>
+ <input class="btn btn-primary btn-lg btn-block" type="submit" value="登入"/><a class="btn btn-default btn-lg btn-block" href="register.php">Sign up</a>
  </form>
  <br/>
  <?php if($error_flag){ ?>
   <div class="alert alert-danger alert-dismissible" role="alert">
-  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 密碼錯誤！
+  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> Password error!
   </div>
  <?php }?>
 
  <?php if($notfound_flag){ ?>
   <div class="alert alert-danger alert-dismissible" role="alert">
-  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 未找到本使用者，請重新確認！
+  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> Can not find this user！
   </div>
  <?php }?>
  </div>

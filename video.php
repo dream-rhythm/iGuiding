@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>目錄</title>
+		<title>Menu</title>
 		<link rel="stylesheet" href="webix/codebase/webix.css" type="text/css" charset="utf-8">
 		<script src="webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>
 		<script src="websocket.js" type="text/javascript" charset="utf-8"></script>
@@ -25,7 +25,7 @@
 	
 	
 		<div class='header_comment'>
-			<a href="member.php"><img src='back.ico' width='30px' height='30px'><strong>返回功能選單</strong></a>
+			<a href="member.php"><img src='back.ico' width='30px' height='30px'><strong>Back</strong></a>
 		</div>
 		<div  style='float:left'>
 			<div style='float:left;'>
@@ -38,8 +38,8 @@
 				<label id='student_name'></label><br>
 				<img id='student_pic' src='img/unknowPerson.png' width='148px' height='188px'>
 			</div><br>
-			<div>檔案列表
-			<input type="button" value="重新整理" onclick="reload()">
+			<div>File List
+			<input type="button" value="Refresh" onclick="reload()">
 			</div>
 			<div id="testA" style='width:300px; height:250px;'></div>
 		</div>

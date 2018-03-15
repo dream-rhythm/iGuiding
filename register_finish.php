@@ -15,18 +15,18 @@ if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
         $sql = "insert into user (Name, Password) values ('".$id."', '".$pw."')";
         if(mysqli_query($link, $sql))
         {
-                echo '新增成功!';
+                echo 'Sing up success!';
                 echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
         }
         else
         {
-                echo '新增失敗!';
+                echo 'Sign up failed!';
                 echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
         }
 }
 else
 {
-        echo '您無權限觀看此頁面!';
+        echo 'Sorry! You do not have authority to use it!';
         echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 }
 ?>

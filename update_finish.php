@@ -23,24 +23,24 @@ if($_SESSION['username'] != null && $pw != null && $npw != null && $npw == $npw2
 			$sql = "update user set Password='".$npw."' where Name='".$id."'";
 			if(mysqli_query($link, $sql))
 			{
-				echo '修改成功!';
+				echo 'Change Password Success!';
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=member.php>';
 			}
 			else
 			{
-				echo '修改失敗!';
+				echo 'Change Password Failed!';
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=member.php>';
 			}
 			
 		}
 		else{
-			echo '修改失敗!';
+			echo 'Change Password Failed!';
 			echo '<meta http-equiv=REFRESH CONTENT=2;url=member.php>';
 		}
 }
 else
 {
-    echo '您無權限觀看此頁面!';
+    echo 'Sorry! You do not have authority to use it';
     echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 }
 ?>
